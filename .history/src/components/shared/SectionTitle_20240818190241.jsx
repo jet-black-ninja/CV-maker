@@ -1,0 +1,5 @@
+function SectionTitle({title}){
+    return (
+        
+    )
+}
