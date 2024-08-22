@@ -2,7 +2,7 @@ import Header from './Header.jsx';
 import Home from './Home';
 import NotFound from './NotFound';
 import Footer from './Footer.jsx';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, HashRouter, Routes, Route } from "react-router-dom";
 
 import ResumeBuilder from './ResumeBuilder.jsx';
 import Blog from './pages/Blog.jsx';

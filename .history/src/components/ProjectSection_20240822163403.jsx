@@ -23,24 +23,21 @@ function ProjectTableRow({row}){
     );
 }
 
-function ProjectTable({ rows }) {
+function ProjectTable({project}){
     return (
-      <table className="table-auto border-collapse border border-black">
-        <tbody>
-          {
-            rows.map(row => (
-              <ProjectTableRow key={row.id} row={row} />
-            ))
-          }
-        </tbody>
-      </table>
-    )
-  }
+        <>
+            <div className = "flex flex-col">
+                <Title title = {project.name} period = {project.period}/>
+                <ProjectTable row={project.sections}/>
+            </div>
+        </>
+    );
+}
 function ProjectItem({ project }) {
     return (
       <>
         <div className="flex flex-col">
-          <Title title={project.name} period={project.period} />
+          <TitleWithPeriod title={project.name} period={project.period} />
           <ProjectTable rows={project.sections} />
         </div>
       </>

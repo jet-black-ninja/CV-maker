@@ -2,7 +2,7 @@ import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { Button } from "./Button";
 import { InputWorkExperienceItem } from "./InputWorkExperienceItem";
-import { HRLine } from "./shared/HR";
+import { GrayHRLine } from "./shared/GrayHRLine";
 
 export function InputWorkExperiences({ workExperiences = [], onSave }) {
   const onAddNew = () => {
@@ -35,7 +35,7 @@ export function InputWorkExperiences({ workExperiences = [], onSave }) {
           {workExperiences.map((item) => (
             <div className="mb-4" key={item.id}>
               <InputWorkExperienceItem workExperience={item} onSave={handleChangeWorkExperience} onRemove={handleRemoveWorkExperience}/>
-              <HRLine />
+              <GrayHRLine />
             </div>
           ))}
 

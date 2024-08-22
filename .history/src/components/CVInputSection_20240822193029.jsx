@@ -55,7 +55,7 @@ function CVInputSection({ cvData, onChangeCV }) {
           <InputObjective objective={cvData.objective} onSave={handleChangeObjective} />
         </Accordion>
 
-        <Accordion title="Work Experiences" expanded={false}>
+        <Accordion title="Work exp" expanded={false}>
           <InputWorkExperiences workExperiences={cvData.workExperiences} onSave={handleChangeWorkExperiences} />
         </Accordion>
 

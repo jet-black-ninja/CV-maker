@@ -35,7 +35,7 @@ export function InputWorkExperiences({ workExperiences = [], onSave }) {
           {workExperiences.map((item) => (
             <div className="mb-4" key={item.id}>
               <InputWorkExperienceItem workExperience={item} onSave={handleChangeWorkExperience} onRemove={handleRemoveWorkExperience}/>
-              <HRLine />
+              <GrayHRLine />
             </div>
           ))}
 

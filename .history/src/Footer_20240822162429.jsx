@@ -5,7 +5,7 @@ function Footer() {
         <span className="text-sm text-gray-500 sm:text-center ">
           © { new Date().getFullYear() }{" "}
           <a
-            href="/"
+            href="https://simpleresume.net"
             target="_blank"
             className="hover:underline"
           >
@@ -14,7 +14,7 @@ function Footer() {
           . All Rights Reserved.
         </span>
         <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-          {/* <a
+          <a
             href="https://www.facebook.com/lpl212757"
             className="text-gray-500 hover:text-gray-900 "
           >
@@ -30,9 +30,9 @@ function Footer() {
                 clipRule="evenodd"
               />
             </svg>
-          </a> */}
+          </a>
           <a
-            href="https://github.com/jet-black-ninja"
+            href="https://github.com/lpl212757"
             className="text-gray-500 hover:text-gray-900 "
           >
             <svg

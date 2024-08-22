@@ -12,7 +12,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="text-black flex flex-col">
-        <Header />
+        <Header/>
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/builder" element={<ResumeBuilder />} />

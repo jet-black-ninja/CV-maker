@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { Icon } from "./Icon";
-import { HRLine } from "./shared/HR";
-import { TextInput } from "./shared/TextInput";
-import { TextAreaInput } from "./shared/TextAreaInput";
+import { HRLine } from "./shared/HRLine";
+import { SimpleTextInput } from "./shared/SimpleTextInput";
+import { SimpleTextAreaInput } from "./shared/SimpleTextAreaInput";
 import { Modal } from "./shared/Modal";
 
 
@@ -85,18 +85,18 @@ export function InputWorkExperienceItem({ workExperience, onSave, onRemove }) {
             <div className="flex flex-col">
               <div className="w-full mb-4">
                 {/* Company Name */}
-                <TextInput title="Company Name" id={workExperience.id + "-company-name"} initialValue={workExperience.companyName}
+                <SimpleTextInput title="Company Name" id={workExperience.id + "-company-name"} initialValue={workExperience.companyName}
                   placeholder="ABC Company"
                   onChange={(value) => onSave({ ...workExperience, companyName: value })} />
               </div>
               <div className="grid grid-cols-2 gap-4 mb-4">
                 {/* Job Title */}
-                <TextInput title="Title" id={workExperience.id + "-title"} initialValue={workExperience.jobTitle}
+                <SimpleTextInput title="Title" id={workExperience.id + "-title"} initialValue={workExperience.jobTitle}
                   placeholder="Software Engineer"
                   onChange={(value) => onSave({ ...workExperience, jobTitle: value })} />
 
                 {/* Work period */}
-                <TextInput title="Period" id={workExperience.id + "-period"} initialValue={workExperience.workPeriod}
+                <SimpleTextInput title="Period" id={workExperience.id + "-period"} initialValue={workExperience.workPeriod}
                   placeholder="Jan 2020 - Dec 2021"
                   onChange={(value) => onSave({ ...workExperience, workPeriod: value })} />
               </div>
@@ -145,7 +145,7 @@ export function InputWorkExperienceItem({ workExperience, onSave, onRemove }) {
           <Modal show={showModal} title={modalTitle}>
             <div className="overflow-auto max-h-500 relative border-t border-b border-t-blue-gray-100 border-b-blue-gray-100 p-4 font-sans text-base font-light flex flex-col gap-2">
               { /* Title */}
-              <TextInput
+              <SimpleTextInput
                 title="Title"
                 id={selectedSection.id + "-title"}
                 initialValue={selectedSection.title}
@@ -153,7 +153,7 @@ export function InputWorkExperienceItem({ workExperience, onSave, onRemove }) {
                 onChange={(value) => setSelectedSection({ ...selectedSection, title: value })} />
 
               { /* Description */}
-              <TextAreaInput
+              <SimpleTextAreaInput
                 title="Description"
                 placeholder="Input key point description..."
                 id={selectedSection.id + "-description"}

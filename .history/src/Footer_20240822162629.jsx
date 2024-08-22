@@ -5,7 +5,7 @@ function Footer() {
         <span className="text-sm text-gray-500 sm:text-center ">
           © { new Date().getFullYear() }{" "}
           <a
-            href="/"
+            href="https://simpleresume.net"
             target="_blank"
             className="hover:underline"
           >
